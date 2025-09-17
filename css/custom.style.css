@@ -1,0 +1,47 @@
+/*----WhyChoose---------
+----------------------*/
+
+.whychoose-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.whychoose-item {
+  display: flex;
+  align-items: flex-start;
+  border-left: 4px solid #16a34a; /* emerald green */
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.whychoose-item:hover {
+  background: #e6f9f0;
+  transform: translateX(5px);
+}
+
+.whychoose-item .icon {
+  background: #16a34a;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.whychoose-item h5 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.whychoose-item p {
+  margin: 0;
+  color: #555;
+}
