@@ -18,8 +18,11 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
+    /* --bs-primary: #3AB54A; */
     --bs-primary: #00D1F9;
     --bs-secondary: #19409A;
+    /* --bs-primary: #1BA39C; */
+    /* --bs-secondary: #2E3192; */
     --bs-success: #198754;
     --bs-info: #0dcaf0;
     --bs-warning: #ffc107;
