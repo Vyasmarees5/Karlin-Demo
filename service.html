@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
 <title>Pharma Services | Karlin Pharmaceuticals - Contract Manufacturing & R&D</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="keywords" content="pharma services, contract manufacturing, CDMO, R&D, drug formulation, regulatory support, supply chain, Karlin Pharmaceuticals India">
 <meta name="description" content="Karlin Pharmaceuticals offers professional pharma services including contract manufacturing (CDMO), research & development, regulatory support, and global supply chain solutions. Reliable, innovative, and affordable healthcare partner.">
 
@@ -27,8 +28,15 @@
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
+          <!-- Bootstrap Icons (for green tick) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/custom2.css" rel="stylesheet">
     </head>
 
     <body>
@@ -57,26 +65,8 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="product.html" class="nav-item nav-link">Products</a>
                         <a href="service.html" class="nav-item nav-link active">Service</a>
-                        <!-- <div class="nav-item dropdown active">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Our Feature</a>
-                                <a href="product.html" class="dropdown-item active">Our Product</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div> -->
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <!-- <div class="d-none d-xl-flex me-3">
-                        <div class="d-flex flex-column pe-3 border-end border-primary">
-                            <span class="text-body">Get Free Delivery</span>
-                            <a href="tel:+4733378901"><span class="text-primary">Free: + 0123 456 7890</span></a>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary btn-md-square d-flex flex-shrink-0 mb-3 mb-lg-0 rounded-circle me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                    <a href="" class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4">Order Now</a> -->
                 </div>
             </nav>
 
@@ -95,24 +85,43 @@
         </div>
         <!-- Navbar & Hero End -->
 
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text btn border p-3"><i class="fa fa-search text-white"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
+          <!-- ***** Whatsapp pop up start ***** -->
+
+<!-- WhatsApp Chat Box -->
+<div id="chatBox" class="chat-box shadow">
+  <div class="chat-header">
+    <span>Quick Enquiry</span>
+  </div>
+  <div class="chat-body">
+<form id="whatsappForm">
+      <div class="mb-3">
+        <input type="text" id="whatsapp-Name" class="form-control" placeholder="Your Name" required>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" id="whatsapp-Email" class="form-control" placeholder="Email-Id" required>
+      </div>
+
+<div class="mb-3">
+        <input type="text" id="whatsapp-Message" class="form-control" placeholder="Your Message" required>
+      </div>
+
+      <button type="submit" class="chat-btn w-100">
+        <i class="bi bi-send"></i> Send on WhatsApp
+      </button>
+    </form>
+     </div>
+</div>
+
+<!-- Floating WhatsApp / Close Button -->
+ <div>
+    <p id="whatsappText">Need Help? <strong>Chat with us</strong></p>
+    <button id="whatsappBtn" class="whatsapp-btn">
+  <i class="bi bi-whatsapp"></i>
+</button>
+
+ </div>
+  <!-- ***** Whatsapp pop up end ***** -->
 
         <!-- service Start -->
 <section class="container py-5">
@@ -437,10 +446,10 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> 1st Cross Street, Thirumudivakkam Tamil Nadu 600132</a>
-                            <a href="mailto:karlin@gmail.com"><i class="fas fa-envelope me-2"></i> karlin@gmail.com</a>
-                            <a href="tel:08043886013"><i class="fas fa-phone me-2"></i> 08043886013</a>
-                            <!-- <a href="tel:08043886013" class="mb-3"><i class="fas fa-print me-2"></i> 08043886013</a> -->
+                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Plot No 15,SFNo.227,SIDCO Industrial Estate, Thirumudivakkam Kancheepuram -44 Tamil Nadu, INDIA</a>
+                            <a href="mailto:info@karlinpharmaceuticals.com"><i class="fas fa-envelope me-2"></i> info@karlinpharmaceuticals.com</a>
+                            <a href="tel:91 44 45820395"><i class="fas fa-phone me-2"></i> 91 44 45820395</a>
+                            <a href="tel:91 7358183156"><i class="fas fa-phone me-2"></i> 91 7358183156</a>
                         </div>
                     </div>
                 </div>

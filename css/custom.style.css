@@ -45,3 +45,28 @@
   margin: 0;
   color: #555;
 }
+
+ .corevalues .value-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 0;
+    }
+    .corevalues .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.15);
+    }
+    .corevalues .icon-box {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #e6f9f0;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    .corevalues .icon-box img {
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+    }

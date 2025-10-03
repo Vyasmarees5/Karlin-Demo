@@ -1,0 +1,150 @@
+/*==========whatsapp popup==================
+==================================== */
+
+/* Floating Button */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 95px;
+    right: 30px;
+    background: #25D366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10000;
+    transition: background 0.3s;
+  }
+  .whatsapp-btn:hover {
+    background: #1ebe57;
+  }
+
+  /* Chat Box */
+  .chat-box {
+    position: fixed;
+    bottom: 160px;
+    right: 28px;
+    width: 280px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      opacity: 0;                
+  transform: translateY(20px); 
+  pointer-events: none;        
+  transition: all 0.5s ease; 
+    z-index: 9999;
+  }
+
+  .chat-box.show {            
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+  .chat-header {
+    background: #25D366;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .chat-header-text{
+    text-align: center;
+  }
+
+  /* Input fields */
+.chat-body .form-control {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #000;         
+  background: #fff;
+  box-shadow: none;
+}
+
+.chat-body .form-control::placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+/* Button */
+.chat-btn {
+  background: #25D366;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+  .whatsapp-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .whatsapp-close-btn:hover {
+    color: #000;
+  }
+
+  .chat-body {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .chat-body p {
+    margin-bottom: 15px;
+  }
+
+#whatsappText {
+  position: fixed;       
+  bottom: 93px;         
+  right: 95px;          
+  background: #F5F7F9;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  transition: opacity 0.5s ease; 
+}
+
+#whatsappText.hide {    
+  opacity: 0;
+  pointer-events: none;
+}
+
+.icon-spin {
+  display: inline-block;
+  animation: spin 0.5s linear;
+}
+
+.icon-spin-reverse {
+  display: inline-block;
+  animation: spin-reverse 0.5s linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(180deg); }
+  to { transform: rotate(0deg); }
+}
