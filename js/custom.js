@@ -53,3 +53,37 @@ document.getElementById("whatsappForm").addEventListener("submit", function(e){
     window.open(`https://wa.me/${phoneNumber}?text=${whatsappMsg}`, "_blank");
     }
 })
+
+/*-------Gallery-------------
+-----------------------------*/
+
+//Filter Gallery
+
+const filterButtons = document.querySelectorAll('[data-filter]');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const filter = btn.getAttribute("data-filter");
+
+    galleryItems.forEach(item => {
+      if (filter === 'all' || item.getAttribute('data-category') === filter){
+        item.classList.remove("hide");
+      }else{
+        item.classList.add("hide");
+      }
+    })
+  })
+})
+
+// Image modal view
+document.querySelectorAll('.gallery img').forEach(img =>{
+  img.addEventListener("click", ()=>{
+    const modalImage = document.getElementById("modalImage");
+    modalImage.src = img.src;
+    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    modal.show();
+  })
+})

@@ -868,6 +868,7 @@
 /*** Footer Start ***/
 .footer {
     background: var(--bs-dark);
+    color: #fff;
 }
 
 .footer .footer-item a {
@@ -876,9 +877,9 @@
     transition: 0.5s;
 }
 
-.footer .footer-item p {
+/* .footer .footer-item p {
     line-height: 35px;
-}
+} */
 
 .footer .footer-item a:hover {
     letter-spacing: 1px;
