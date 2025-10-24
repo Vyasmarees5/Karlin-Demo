@@ -191,3 +191,97 @@
       cursor: pointer;
       z-index: 1051;
     }
+
+/*==========Quality==================
+==================================== */
+
+     .quality-section {
+      background: linear-gradient(135deg, #e9f4ff 0%, #ffffff 100%);
+      border-radius: 1rem;
+      padding: 60px 30px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .quality-icon {
+      font-size: 2.5rem;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+
+    .quality-point {
+      background: #ffffff;
+      border-left: 5px solid #0d6efd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .quality-point:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .quality-point i {
+      color: #0d6efd;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .quality-section {
+        padding: 40px 20px;
+      }
+    }
+
+/*==========Product Category==================
+============================================ */
+
+    .categories-section {
+      padding: 60px 20px;
+    }
+
+    .category-card {
+      background: #ffffff;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+      text-align: center;
+      padding: 40px 25px;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .category-icon {
+      font-size: 2.8rem;
+      color: #198754;
+      margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: rgba(25, 135, 84, 0.1);
+    }
+
+    .category-card h5 {
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 12px;
+    }
+
+    .category-card p {
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .category-card {
+        padding: 30px 20px;
+      }
+    }
