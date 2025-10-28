@@ -285,3 +285,333 @@
         padding: 30px 20px;
       }
     }
+
+/*==========Research & Quality==================
+============================================ */
+
+  .hex-section {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hex-section h2 {
+      font-weight: 700;
+      margin-bottom: 60px;
+      color: #0056A6;
+    }
+
+    .hex-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .hex {
+      position: relative;
+      width: 280px;
+      height: 160px;
+      background: linear-gradient(135deg, #00A78E, #0056A6);
+      clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
+      color: white;
+      transition: all 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hex:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 167, 142, 0.3);
+    }
+
+    .hex::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.08);
+      clip-path: inherit;
+      transition: opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    .hex:hover::before {
+      opacity: 1;
+    }
+
+    .hex-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hex-content h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hex-content p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #e8f9f6;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      .hex-section h2 {
+        font-size: 1.8rem;
+      }
+      .hex {
+        width: 240px;
+        height: 140px;
+      }
+      .hex-content h4 {
+        font-size: 1rem;
+      }
+      .hex-content p {
+        font-size: 0.85rem;
+      }
+    }
+
+/*==========Domestic Market==================
+============================================ */
+
+    .market-section {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 480px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .market-left,
+    .market-right {
+      flex: 1 1 50%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .market-left {
+      background: linear-gradient(135deg, #003b8e 0%, #0056a6 100%);
+      color: #ffffff;
+    }
+
+    .market-right {
+      background: #ffffff;
+      color: #03314b;
+    }
+
+    .market-title {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #fff;
+      position: relative;
+    }
+
+    .market-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #00a78e;
+      border-radius: 2px;
+    }
+
+    .market-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .market-points li {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .market-points li::before {
+      content: "✔️";
+      margin-right: 10px;
+      font-size: 1.1rem;
+      color: #00e1b6;
+    }
+
+    .market-cta {
+      margin-top: 30px;
+    }
+
+    .market-btn {
+      background-color: #00a78e;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .market-btn:hover {
+      background-color: #008873;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 991px) {
+      .market-left,
+      .market-right {
+        flex: 1 1 100%;
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .market-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .market-points li {
+        justify-content: center;
+      }
+    }
+    
+/*==========manufacturing services==================
+============================================ */
+    
+ .manufacturing-services {
+      padding: 80px 20px;
+      background: #f8fafc;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .manufacturing-services h2 {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 60px;
+      color: #0056a6;
+      position: relative;
+    }
+
+    .manufacturing-services h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: #00a78e;
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .manufacturing-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      text-align: center;
+      padding: 30px 20px;
+      height: 100%;
+    }
+
+    .manufacturing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .manufacturing-img {
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00a78e;
+      margin-bottom: 20px;
+    }
+
+    .manufacturing-card h5 {
+      font-weight: 600;
+      color: #03314b;
+      margin-bottom: 12px;
+    }
+
+    .manufacturing-card p {
+      font-size: 0.95rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    /* -------- Responsive -------- */
+    @media (max-width: 767px) {
+      .manufacturing-services h2 {
+        font-size: 1.7rem;
+      }
+      .manufacturing-img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+/*==========Product Logo==================
+============================================ */
+
+.logo-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  height: auto; 
+}
+
+.column {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  transition: all 0.5s ease;
+}
+
+.logo img {
+  padding-top: 20px;
+  max-width: 100%;
+  height: auto;
+  max-height: 100px; 
+}
+
+.column {
+  display: none;
+}
+
+.column.show {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .logo-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    grid-template-columns: repeat (2, 1fr); 
+    padding: 10px;
+  }
+  .logo img {
+    max-height: 80px; 
+  }
+}
