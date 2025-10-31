@@ -406,6 +406,34 @@
 }
 /*** Carousel Hero Header End ***/
 
+/*** about-us Header Start ***/
+.bg-about-us {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)),url(../img/about/About_us.webp);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 60px 0;
+    transition: 0.5s;
+}
+
+.bg-about-us breadcrumb {
+    position: relative;
+    list-style: none;
+}
+
+.bg-about-us .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+
+@media (max-width: 992px) {
+    .bg-about-us {
+        padding: 60px 0 60px 0;
+    }
+}
+/*** about-us Page Header End ***/
+
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
     position: relative;
