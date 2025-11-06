@@ -406,7 +406,7 @@
 }
 /*** Carousel Hero Header End ***/
 
-/*** about-us Header Start ***/
+/*** about-us Banner Start ***/
 .bg-about-us {
     position: relative;
     overflow: hidden;
@@ -414,7 +414,7 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 120px 0 60px 0;
+    padding: 120px 0 220px 0;
     transition: 0.5s;
 }
 
@@ -432,17 +432,101 @@
         padding: 60px 0 60px 0;
     }
 }
-/*** about-us Page Header End ***/
+/*** about-us Banner End ***/
+
+/*** product-us Banner start ***/
+.bg-product-us {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)),url(../img/product/product-bg.webp);
+    /* background-position: center top; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 220px 0;
+    transition: 0.5s;
+}
+
+.bg-product-us breadcrumb {
+    position: relative;
+    list-style: none;
+}
+
+.bg-product-us .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+
+@media (max-width: 992px) {
+    .bg-product-us {
+        padding: 60px 0 60px 0;
+    }
+}
+/*** product-us Banner End  ***/
+
+/*** service-us Banner start ***/
+.bg-service-us {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)),url(../img/service/service_bg.webp);
+    /* background-position: center top; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 220px 0;
+    transition: 0.5s;
+}
+
+.bg-service-us breadcrumb {
+    position: relative;
+    list-style: none;
+}
+
+.bg-service-us .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+
+@media (max-width: 992px) {
+    .bg-service-us {
+        padding: 60px 0 60px 0;
+    }
+}
+/*** service-us Banner End  ***/
+
+/*** contact-us Banner start ***/
+.bg-contact-us {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)),url(../img/contact/contact_bg.webp);
+    /* background-position: center top; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 220px 0;
+    transition: 0.5s;
+}
+
+.bg-contact-us breadcrumb {
+    position: relative;
+    list-style: none;
+}
+
+.bg-contact-us .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+
+@media (max-width: 992px) {
+    .bg-contact-us {
+        padding: 60px 0 60px 0;
+    }
+}
+/*** contact-us Banner End ***/
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)), url(../img/about/bg.jpeg);
-    background-position: center top;
+    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)), url(../img/Gallery/gallery-bg.webp);
+    /* background-position: center top; */
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 120px 0 60px 0;
+    padding: 120px 0 220px 0;
     transition: 0.5s;
 }
 
