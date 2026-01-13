@@ -9,20 +9,16 @@
     <meta name="keywords" content="contact Karlin Pharmaceuticals, dermatology manufacturer enquiry, pharmaceutical export enquiry, contract manufacturing contact">
     <meta name="description" content="Contact Karlin Pharmaceuticals for dermatology product enquiries, contract manufacturing discussions, and export-related communication.">
 
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/custom.style.css" rel="stylesheet">
@@ -39,7 +35,7 @@
             background-color: #f9f9f9;
             min-width: 200px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
+            z-index: 1000;
             border-radius: 5px;
             margin-top: 5px;
         }
@@ -70,14 +66,8 @@
             animation: slideDown 0.3s ease-out;
         }
         @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .alert-success {
             background-color: #d4edda;
@@ -100,6 +90,7 @@
             height: 20px;
             animation: spin 1s linear infinite;
             margin-left: 10px;
+            vertical-align: middle;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -114,11 +105,9 @@
 
 <body>
 
-<!-- Navbar -->
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
-            <img src="img/logo.webp" alt="Karlin Pharmaceuticals logo">
             <span class="text-secondary">Karlin Pharmaceuticals</span>
         </a>
 
@@ -138,31 +127,25 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
     <div class="container-fluid bg-contact-us">
         <div class="container text-center py-5" style="max-width: 900px;">
             <h1 class="text-white mb-3 wow fadeInDown" data-wow-delay="0.1s">
                 Contact Karlin Pharmaceuticals
             </h1>
-
             <p class="text-white mb-4">
                 Dermatology manufacturing, export, and contract manufacturing enquiries
             </p>
-
             <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item active text-primary">Contact</li>
             </ol>
         </div>
     </div>
-</div>
-
-<!-- Contact Section -->
+    </div>
 <div class="contact bg-light py-5">
     <div class="container py-5">
         <div class="row g-5">
 
-            <!-- Contact Form -->
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
 
                 <div class="mb-4">
@@ -173,7 +156,6 @@
                     </p>
                 </div>
 
-                <!-- Alert Messages -->
                 <div id="alertSuccess" class="alert-message alert-success">
                     <i class="fas fa-check-circle me-2"></i>
                     <strong>Thank you for contacting us!</strong><br>
@@ -182,7 +164,7 @@
 
                 <div id="alertError" class="alert-message alert-error">
                     <i class="fas fa-exclamation-circle me-2"></i>
-                    <strong>Oops!</strong> There was an error sending your message. Please try again or contact us directly via phone/email.
+                    <strong>Oops!</strong> <span id="errorText">There was an error sending your message. Please try again.</span>
                 </div>
 
                 <form id="contactForm">
@@ -223,6 +205,9 @@
                             </div>
                         </div>
 
+                        <!-- Honeypot field for spam prevention -->
+                        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
                         <div class="col-12">
                             <p class="small text-muted mb-3">
                                 This enquiry will be sent to:
@@ -241,7 +226,6 @@
                 </form>
             </div>
 
-            <!-- Contact Details -->
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="row g-4">
 
@@ -304,27 +288,22 @@
         </div>
     </div>
 </div>
-
-<!-- Contact End -->
-
-<!-- Footer Start -->
 <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5">
 
-        <!-- Social Links -->
         <div class="row g-5 mb-5 justify-content-end align-items-center">
             <div class="col-lg-5">
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)" aria-label="Facebook">
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)" aria-label="Twitter">
-                        <i class="fa-brands fa-x-twitter"></i>
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)">
+                        <i class="fab fa-twitter"></i>
                     </a>
-                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)" aria-label="Instagram">
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="javascript:void(0)" aria-label="LinkedIn">
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="javascript:void(0)">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
@@ -332,53 +311,38 @@
         </div>
 
         <div class="row g-5">
-
-            <!-- Company Description -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h3 class="text-white mb-4">Karlin Pharmaceuticals</h3>
                     <p class="mb-3">
                         Karlin Pharmaceuticals is a dermatology-focused pharmaceutical manufacturer
                         engaged in formulation development, manufacturing, and supply for domestic
-                        and export markets, operating in compliance with applicable quality standards.
+                        and export markets.
                     </p>
                 </div>
             </div>
 
-            <!-- Quick Links -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="text-white mb-4">Quick Links</h4>
-
-                    <a href="product.html">
-                        <i class="fas fa-angle-right me-2"></i> Products
-                    </a>
-
-                    <a href="service.html">
-                        <i class="fas fa-angle-right me-2"></i> Services
-                    </a>
-
-                    <a href="contact.html">
-                        <i class="fas fa-angle-right me-2"></i> Contact
-                    </a>
+                    <a href="product.html"><i class="fas fa-angle-right me-2"></i> Products</a>
+                    <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                    <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                    <a href="about.html"><i class="fas fa-angle-right me-2"></i> About</a>
                 </div>
             </div>
 
-            <!-- Business Hours -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="text-white mb-4">Business Hours</h4>
-
                     <div class="mb-3">
                         <h6 class="text-body mb-0">Monday – Friday</h6>
                         <p class="text-white mb-0">09:00 AM – 07:00 PM</p>
                     </div>
-
                     <div class="mb-3">
                         <h6 class="text-body mb-0">Saturday</h6>
                         <p class="text-white mb-0">10:00 AM – 05:00 PM</p>
                     </div>
-
                     <div class="mb-3">
                         <h6 class="text-body mb-0">Sunday</h6>
                         <p class="text-white mb-0">Closed</p>
@@ -386,66 +350,48 @@
                 </div>
             </div>
 
-            <!-- Contact Information -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="text-white mb-4">Contact Information</h4>
-
                     <p class="mb-2">
                         <i class="fa fa-map-marker-alt me-2"></i>
-                        Plot No.15, SF No.227, SIDCO Industrial Estate,
-                        Thirumudivakkam, Kancheepuram – 44,
-                        Tamil Nadu, India
+                        Plot No.15, SF No.227, SIDCO Industrial Estate, Thirumudivakkam,
+                        Kancheepuram – 44, Tamil Nadu
                     </p>
-
                     <p class="mb-2">
                         <i class="fas fa-envelope me-2"></i>
-                        <a href="javascript:void(0)" onclick="copyEmailSimple()">
-                            info@karlinpharmaceuticals.com
-                        </a>
+                        <a href="mailto:info@karlinpharmaceuticals.com">info@karlinpharmaceuticals.com</a>
                     </p>
-
                     <p class="mb-0">
                         <i class="fas fa-phone me-2"></i>
-                        <a href="tel:+914445820395">+91 44 45820395</a><br>
-                        <a href="tel:+917358183156">+91 73581 83156</a>
+                        <a href="tel:+914445820395">+91 44 45820395</a>
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-<!-- Footer End -->
-
-<!-- Copyright -->
 <div class="container-fluid copyright py-4">
     <div class="container">
         <div class="row g-4 align-items-center">
-
             <div class="col-md-6 text-center text-md-start">
                 <span class="text-white">
                     <i class="fas fa-copyright me-2"></i>
                     Karlin Pharmaceuticals. All rights reserved.
                 </span>
             </div>
-
             <div class="col-md-6 text-center text-md-end">
                 <span class="text-white">
                     Designed by Vimkes Technologies
                 </span>
             </div>
-
         </div>
     </div>
 </div>
-
-<!-- Back to Top -->
 <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top">
     <i class="fa fa-arrow-up"></i>
 </a>
 
-<!-- JavaScript Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="lib/wow/wow.min.js"></script>
@@ -454,12 +400,18 @@
 <script src="lib/counterup/counterup.min.js"></script>
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-<!-- Template Javascript -->
 <script src="js/main.js"></script>
 <script src="js/custom.js"></script>
 
-<!-- Contact Form Handler Script -->
 <script>
+// ==========================================
+// CONFIGURATION
+// ==========================================
+// 1. For Testing on your computer: use 'http://localhost:3000/api/send-email'
+// 2. For LIVE Website: Replace this URL with your Render/Railway/Vercel backend URL
+const BACKEND_URL = 'http://localhost:3000/api/send-email'; 
+// ==========================================
+
 // Toggle email options dropdown
 function toggleEmailOptions(event) {
     event.preventDefault();
@@ -485,86 +437,84 @@ function copyEmailSimple() {
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
-    alert('Email address copied to clipboard: ' + email);
+    alert('Email address copied to clipboard');
 }
 
 // Form submission handler
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
     
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    const spinner = document.getElementById('loadingSpinner');
-    const successAlert = document.getElementById('alertSuccess');
-    const errorAlert = document.getElementById('alertError');
-    
-    // Hide any previous alerts
-    successAlert.style.display = 'none';
-    errorAlert.style.display = 'none';
-    
-    // Show loading state
-    submitBtn.disabled = true;
-    submitBtn.classList.add('btn-disabled');
-    btnText.style.display = 'none';
-    spinner.style.display = 'inline-block';
-    
-    // Prepare form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        company: document.getElementById('company').value,
-        country: document.getElementById('country').value,
-        message: document.getElementById('message').value
-    };
-    
-    try {
-        // Send to Node.js backend
-        const response = await fetch('http://localhost:3000/api/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const spinner = document.getElementById('loadingSpinner');
+            const successAlert = document.getElementById('alertSuccess');
+            const errorAlert = document.getElementById('alertError');
+            const errorText = document.getElementById('errorText');
+            
+            // Reset UI
+            successAlert.style.display = 'none';
+            errorAlert.style.display = 'none';
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.classList.add('btn-disabled');
+            btnText.style.display = 'none';
+            spinner.style.display = 'inline-block';
+            
+            // Prepare Data (must match server.js expectations)
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value || 'Not provided',
+                country: document.getElementById('country').value,
+                message: document.getElementById('message').value
+            };
+            
+            try {
+                // Send data to Node.js Backend
+                const response = await fetch(BACKEND_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // Success Case
+                    successAlert.style.display = 'block';
+                    contactForm.reset();
+                    successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Auto-hide success message after 10 seconds
+                    setTimeout(() => {
+                        successAlert.style.display = 'none';
+                    }, 10000);
+                } else {
+                    // Server returned an error (e.g., missing fields)
+                    throw new Error(result.message || 'Server error occurred');
+                }
+
+            } catch (error) {
+                // Network or Logic Error
+                console.error('Submission Error:', error);
+                errorText.innerText = error.message || 'Connection failed. Is the server running?';
+                errorAlert.style.display = 'block';
+                errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Restore Button State
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('btn-disabled');
+                btnText.style.display = 'inline';
+                spinner.style.display = 'none';
+            }
         });
-        
-        const data = await response.json();
-        
-        // Hide loading state
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('btn-disabled');
-        btnText.style.display = 'inline';
-        spinner.style.display = 'none';
-        
-        if (data.success) {
-            // Show success message
-            successAlert.style.display = 'block';
-            this.reset();
-            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            setTimeout(() => {
-                successAlert.style.display = 'none';
-            }, 10000);
-        } else {
-            // Show error message
-            errorAlert.style.display = 'block';
-            errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            setTimeout(() => {
-                errorAlert.style.display = 'none';
-            }, 10000);
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        
-        // Hide loading state
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('btn-disabled');
-        btnText.style.display = 'inline';
-        spinner.style.display = 'none';
-        
-        // Show error message
-        errorAlert.style.display = 'block';
-        errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 });
 </script>
