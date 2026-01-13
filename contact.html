@@ -1,321 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-<title>Contact Us | Karlin Pharmaceuticals - Get in Touch</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta name="keywords" content="contact Karlin Pharmaceuticals, pharma enquiries, partnership enquiries, pharma contact form, Karlin Pharmaceuticals India, customer support">
-<meta name="description" content="Get in touch with Karlin Pharmaceuticals for product enquiries, partnership opportunities, or service support. Our team is here to assist with reliable pharmaceutical solutions.">
+<head>
+    <meta charset="utf-8">
+    <title>Contact | Karlin Pharmaceuticals</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="contact Karlin Pharmaceuticals, dermatology manufacturer enquiry, pharmaceutical export enquiry, contract manufacturing contact">
+    <meta name="description" content="Contact Karlin Pharmaceuticals for dermatology product enquiries, contract manufacturing discussions, and export-related communication.">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.style.css" rel="stylesheet">
+    <link href="css/custom2.css" rel="stylesheet">
 
+    <style>
+        .email-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .email-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .email-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+        .email-dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        .email-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .email-dropdown.show .email-dropdown-content {
+            display: block;
+        }
+        
+        /* Success/Error Message Styles */
+        .alert-message {
+            display: none;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .alert-success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .alert-error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .btn-disabled {
+            opacity: 0.6;
+            cursor: not-allowed !important;
+        }
+    </style>
+</head>
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<body>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/custom.style.css" rel="stylesheet">
-        <link href="css/custom2.css" rel="stylesheet">
+<!-- Navbar -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <img src="img/logo.webp" alt="Karlin Pharmaceuticals logo">
+            <span class="text-secondary">Karlin Pharmaceuticals</span>
+        </a>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">        
-    </head>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
 
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
         </div>
-        <!-- Spinner End -->
+    </nav>
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <!-- <h1 class="text-primary">Karlin Pharmaceuticals</h1> -->
-                    <img src="img/logo.webp" alt="Logo"><span class="text-secondary">Karlin Pharmaceuticals</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link">Products</a>
-                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                    </div>
-                </div>
-            </nav>
+    <!-- Page Header -->
+    <div class="container-fluid bg-contact-us">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h1 class="text-white mb-3 wow fadeInDown" data-wow-delay="0.1s">
+                Contact Karlin Pharmaceuticals
+            </h1>
 
-            <!-- Header Start -->
-            <div class="container-fluid bg-contact-us">
-                <div class="container text-center py-5" style="max-width: 900px;">
-                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
-                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active text-primary">Contact</li>
-                    </ol>    
-                </div>
-            </div>
-            <!-- Header End -->
+            <p class="text-white mb-4">
+                Dermatology manufacturing, export, and contract manufacturing enquiries
+            </p>
+
+            <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active text-primary">Contact</li>
+            </ol>
         </div>
-        <!-- Navbar & Hero End -->
-
-          <!-- ***** Whatsapp pop up start ***** -->
-
-<!-- WhatsApp Chat Box -->
-<div id="chatBox" class="chat-box shadow">
-  <div class="chat-header">
-    <span>Quick Chat</span>
-  </div>
-  <div class="chat-body">
-<form id="whatsappForm">
-      <div class="mb-3">
-        <input type="text" id="whatsapp-Name" class="form-control" placeholder="Your Name" required>
-      </div>
-
-      <div class="mb-3">
-        <input type="text" id="whatsapp-Email" class="form-control" placeholder="Email ID" required>
-      </div>
-
-<div class="mb-3">
-        <input type="text" id="whatsapp-Message" class="form-control" placeholder="Your Message" required>
-      </div>
-
-      <button type="submit" class="chat-btn w-100">
-        <i class="bi bi-send"></i> Send on WhatsApp
-      </button>
-    </form>
-     </div>
+    </div>
 </div>
 
-<!-- Floating WhatsApp / Close Button -->
- <div>
-    <p id="whatsappText">Need Help? <strong>Chat with us</strong></p>
-    <button id="whatsappBtn" class="whatsapp-btn">
-  <i class="bi bi-whatsapp"></i>
-</button>
+<!-- Contact Section -->
+<div class="contact bg-light py-5">
+    <div class="container py-5">
+        <div class="row g-5">
 
- </div>
-  <!-- ***** Whatsapp pop up end ***** -->
+            <!-- Contact Form -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
 
-        <!-- Contact Start -->
-        <div class="contact bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 h-100 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                            <h4 class="text-uppercase text-primary">Let’s Connect</h4>
-                            <h1 class="display-3 text-capitalize mb-3">Domestic, Export, and Career Inquiries</h1>
-                        </div>
-                        <form>
-                            <div class="row g-4">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="name" placeholder="Name">
-                                        <label for="name">Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="email" placeholder="Email">
-                                        <label for="email">Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="company" placeholder="Company">
-                                        <label for="company">Company</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
-                                        <label for="subject">Country</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 175px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="d-inline-flex rounded bg-white w-100 p-4">
-                                    <i class="fas fa-map-marker-alt fa-2x text-secondary me-4"></i>
-                                    <div>
-                                        <h4>Address</h4>
-                                        <p class="mb-0">Plot No.15, SF No.227, SIDCO Industrial Estate, Thirumudivakkam, Kancheepuram – 44, Tamil Nadu, India.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-xl-6">
-                                <div class="d-inline-flex rounded bg-white w-100 p-4">
-                                    <i class="fas fa-envelope fa-2x text-secondary me-4"></i>
-                                    <div>
-                                        <h4>Mail Us</h4>
-                                        <p class="mb-0">
-    <a href="mailto:info@karlinpharmaceuticals.com" class="text-decoration-none text-dark fw-semibold">
-          info@karlinpharmaceuticals.com</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-xl-6">
-                                <div class="d-inline-flex rounded bg-white w-100 p-4">
-                                    <i class="fa fa-phone-alt fa-2x text-secondary me-4"></i>
-                                    <div>
-                                        <h4>phone</h4>
-                                        <p class="mb-0">91 44 45820395</p>
-                                        <p class="mb-0">91 73581 83156</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="h-100 overflow-hidden">
-                                    <iframe class="w-100 rounded" style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.997698898372!2d80.09492811!3d12.97199873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f5004cf0492d%3A0x2e2fd2056eb84f93!2sKarlin%20Pharmaceuticals%20%26%20Exports%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1758620216737!5m2!1sen!2sin" 
-                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
+                <div class="mb-4">
+                    <h2 class="text-primary">Business & Regulatory Enquiries</h2>
+                    <p>
+                        Use the form below for product enquiries, contract manufacturing discussions,
+                        export-related communication, or career-related queries.
+                    </p>
+                </div>
+
+                <!-- Alert Messages -->
+                <div id="alertSuccess" class="alert-message alert-success">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <strong>Thank you for contacting us!</strong><br>
+                    Your message has been sent successfully. We will reach back to you within 48 hours.
+                </div>
+
+                <div id="alertError" class="alert-message alert-error">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    <strong>Oops!</strong> There was an error sending your message. Please try again or contact us directly via phone/email.
+                </div>
+
+                <form id="contactForm">
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                                <label for="name">Full Name *</label>
                             </div>
                         </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                <label for="email">Email Address *</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="company" name="company" placeholder="Company">
+                                <label for="company">Company / Organization</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="country" name="country" placeholder="Country" required>
+                                <label for="country">Country *</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" name="message" style="height: 175px" placeholder="Message" required></textarea>
+                                <label for="message">Message / Enquiry Details *</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <p class="small text-muted mb-3">
+                                This enquiry will be sent to:
+                                <strong>info@karlinpharmaceuticals.com</strong>
+                            </p>
+
+                            <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">
+                                <span id="btnText">
+                                    <i class="fas fa-paper-plane me-2"></i> Submit Enquiry
+                                </span>
+                                <span class="spinner" id="loadingSpinner"></span>
+                            </button>
+                        </div>
+
                     </div>
+                </form>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="row g-4">
+
+                    <div class="col-12">
+                        <div class="d-inline-flex rounded bg-white w-100 p-4">
+                            <i class="fas fa-map-marker-alt fa-2x text-secondary me-4"></i>
+                            <div class="w-100">
+                                <h3>Registered Office</h3>
+                                <p class="mb-0">
+                                    Plot No.15, SF No.227, SIDCO Industrial Estate, Thirumudivakkam,
+                                    Kancheepuram – 44, Tamil Nadu, India.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-inline-flex rounded bg-white w-100 p-4">
+                            <i class="fas fa-envelope fa-2x text-secondary me-4"></i>
+                            <div class="w-100 email-dropdown">
+                                <h3>Email</h3>
+                                <p class="mb-0" style="word-break: break-word;">
+                                    <a href="javascript:void(0)" onclick="toggleEmailOptions(event)" style="cursor: pointer;">
+                                        info@karlinpharmaceuticals.com
+                                    </a>
+                                </p>
+                                <div class="email-dropdown-content">
+                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@karlinpharmaceuticals.com" target="_blank">
+                                        <i class="fab fa-google me-2"></i> Open in Gmail
+                                    </a>
+                                    <a href="https://outlook.live.com/mail/0/deeplink/compose?to=info@karlinpharmaceuticals.com" target="_blank">
+                                        <i class="fab fa-microsoft me-2"></i> Open in Outlook
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="copyEmailSimple()">
+                                        <i class="fas fa-copy me-2"></i> Copy Email
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-inline-flex rounded bg-white w-100 p-4">
+                            <i class="fa fa-phone-alt fa-2x text-secondary me-4"></i>
+                            <div class="w-100">
+                                <h3>Phone</h3>
+                                <p class="mb-0">
+                                    <a href="tel:+914445820395">+91 44 45820395</a>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="tel:+917358183156">+91 73581 83156</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Contact End -->
+
+<!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+
+        <!-- Social Links -->
+        <div class="row g-5 mb-5 justify-content-end align-items-center">
+            <div class="col-lg-5">
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="javascript:void(0)" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5 mb-5 justify-content-end align-items-center">
+        <div class="row g-5">
 
-                    <div class="col-lg-5">
-                        <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+            <!-- Company Description -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h3 class="text-white mb-4">Karlin Pharmaceuticals</h3>
+                    <p class="mb-3">
+                        Karlin Pharmaceuticals is a dermatology-focused pharmaceutical manufacturer
+                        engaged in formulation development, manufacturing, and supply for domestic
+                        and export markets, operating in compliance with applicable quality standards.
+                    </p>
                 </div>
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h3 class="text-white mb-4">Karlin Pharmaceuticals</h3>
-                                <p class="mb-3">Karlin Pharmaceuticals is dedicated to delivering safe, effective, and affordable 
-    healthcare solutions. With a strong commitment to innovation, quality, and trust, 
-    we strive to improve lives by making reliable medicines accessible to all.</p>
-                            </div>
+            </div>
 
-                        </div>
+            <!-- Quick Links -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+
+                    <a href="product.html">
+                        <i class="fas fa-angle-right me-2"></i> Products
+                    </a>
+
+                    <a href="service.html">
+                        <i class="fas fa-angle-right me-2"></i> Services
+                    </a>
+
+                    <a href="contact.html">
+                        <i class="fas fa-angle-right me-2"></i> Contact
+                    </a>
+                </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="text-white mb-4">Business Hours</h4>
+
+                    <div class="mb-3">
+                        <h6 class="text-body mb-0">Monday – Friday</h6>
+                        <p class="text-white mb-0">09:00 AM – 07:00 PM</p>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="product.html"><i class="fas fa-angle-right me-2"></i> Products Page</a>
-                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services page</a>
-                            <a href="javascript:void(0)"><i class="fas fa-angle-right me-2"></i> Careers</a>
-                            <a href="javascript:void(0)"><i class="fas fa-angle-right me-2"></i> Certifications (GMP, GLP, ISO)</a>
-                            <a href="javascript:void(0)"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href="javascript:void(0)"><i class="fas fa-angle-right me-2"></i> Terms of Use</a>
-                        </div>
+
+                    <div class="mb-3">
+                        <h6 class="text-body mb-0">Saturday</h6>
+                        <p class="text-white mb-0">10:00 AM – 05:00 PM</p>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Business Hours</h4>
-                            <div class="mb-3">
-                                <h6 class="text-body mb-0">Mon - Friday:</h6>
-                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-body mb-0">Saturday:</h6>
-                                <p class="text-white mb-0">10.00 am to 05.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-body mb-0">Vacation:</h6>
-                                <p class="text-white mb-0">We are closed on Sundays</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href="javascript:void(0)"><i class="fa fa-map-marker-alt me-2"></i> Plot No 15,SFNo.227,SIDCO Industrial Estate, Thirumudivakkam Kancheepuram -44 Tamil Nadu, INDIA</a>
-                            <a href="mailto:info@karlinpharmaceuticals.com"><i class="fas fa-envelope me-2"></i> info@karlinpharmaceuticals.com</a>
-                            <a href="tel:91 44 45820395"><i class="fas fa-phone me-2"></i> 91 44 45820395</a>
-                            <a href="tel:91 7358183156"><i class="fas fa-phone me-2"></i> 91 7358183156</a>
-                        </div>
+
+                    <div class="mb-3">
+                        <h6 class="text-body mb-0">Sunday</h6>
+                        <p class="text-white mb-0">Closed</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Footer End -->
 
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><span id="date" class="text-white"> </span><span class="text-white"> <i class="fas fa-copyright text-light me-2"></i>Karlin Pharmaceuticals</span>, All rights reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        Designed By <a class="text-white" href="https://vimkes.com/" target="_blank">Vimkes Technologies</a>
-                    </div>
+            <!-- Contact Information -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="text-white mb-4">Contact Information</h4>
+
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-2"></i>
+                        Plot No.15, SF No.227, SIDCO Industrial Estate,
+                        Thirumudivakkam, Kancheepuram – 44,
+                        Tamil Nadu, India
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="javascript:void(0)" onclick="copyEmailSimple()">
+                            info@karlinpharmaceuticals.com
+                        </a>
+                    </p>
+
+                    <p class="mb-0">
+                        <i class="fas fa-phone me-2"></i>
+                        <a href="tel:+914445820395">+91 44 45820395</a><br>
+                        <a href="tel:+917358183156">+91 73581 83156</a>
+                    </p>
                 </div>
             </div>
+
         </div>
-        <!-- Copyright End -->
+    </div>
+</div>
+<!-- Footer End -->
 
+<!-- Copyright -->
+<div class="container-fluid copyright py-4">
+    <div class="container">
+        <div class="row g-4 align-items-center">
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+            <div class="col-md-6 text-center text-md-start">
+                <span class="text-white">
+                    <i class="fas fa-copyright me-2"></i>
+                    Karlin Pharmaceuticals. All rights reserved.
+                </span>
+            </div>
 
-        
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <div class="col-md-6 text-center text-md-end">
+                <span class="text-white">
+                    Designed by Vimkes Technologies
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top">
+    <i class="fa fa-arrow-up"></i>
+</a>
+
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- Contact Form Handler Script -->
+<script>
+// Toggle email options dropdown
+function toggleEmailOptions(event) {
+    event.preventDefault();
+    const dropdown = event.target.closest('.email-dropdown');
+    dropdown.classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.email-dropdown')) {
+        document.querySelectorAll('.email-dropdown').forEach(dropdown => {
+            dropdown.classList.remove('show');
+        });
+    }
+});
+
+// Copy email to clipboard
+function copyEmailSimple() {
+    const email = 'info@karlinpharmaceuticals.com';
+    const tempInput = document.createElement('input');
+    tempInput.value = email;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert('Email address copied to clipboard: ' + email);
+}
+
+// Form submission handler
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
     
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const spinner = document.getElementById('loadingSpinner');
+    const successAlert = document.getElementById('alertSuccess');
+    const errorAlert = document.getElementById('alertError');
+    
+    // Hide any previous alerts
+    successAlert.style.display = 'none';
+    errorAlert.style.display = 'none';
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('btn-disabled');
+    btnText.style.display = 'none';
+    spinner.style.display = 'inline-block';
+    
+    // Prepare form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        company: document.getElementById('company').value,
+        country: document.getElementById('country').value,
+        message: document.getElementById('message').value
+    };
+    
+    try {
+        // Send to Node.js backend
+        const response = await fetch('http://localhost:3000/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const data = await response.json();
+        
+        // Hide loading state
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('btn-disabled');
+        btnText.style.display = 'inline';
+        spinner.style.display = 'none';
+        
+        if (data.success) {
+            // Show success message
+            successAlert.style.display = 'block';
+            this.reset();
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+            }, 10000);
+        } else {
+            // Show error message
+            errorAlert.style.display = 'block';
+            errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            setTimeout(() => {
+                errorAlert.style.display = 'none';
+            }, 10000);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        
+        // Hide loading state
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('btn-disabled');
+        btnText.style.display = 'inline';
+        spinner.style.display = 'none';
+        
+        // Show error message
+        errorAlert.style.display = 'block';
+        errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+});
+</script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/custom.js"></script>
-
-    </body>
-
+</body>
 </html>
