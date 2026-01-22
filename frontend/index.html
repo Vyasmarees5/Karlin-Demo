@@ -1,558 +1,812 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-
-    <!-- SEO: precise, export-grade -->
-    <title>Karlin Pharmaceuticals – WHO-GMP Certified Dermatology Manufacturer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Karlin Pharmaceuticals is a WHO-GMP certified dermatology manufacturer in India, specializing in topical formulations for contract manufacturing and export markets.">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Karlin Pharmaceuticals – WHO-GMP Certified Dermatology Manufacturer
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Karlin Pharmaceuticals is a WHO-GMP certified dermatology manufacturer in India, specializing in topical formulations for contract manufacturing and export markets."
+    />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Icons & CSS (unchanged) -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Icons & CSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
 
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/custom.style.css" rel="stylesheet">
-    <link href="css/custom2.css" rel="stylesheet">
-</head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custom.style.css" rel="stylesheet" />
+    <link href="css/custom2.css" rel="stylesheet" />
 
-<body>
+    <style>
+      /* Mobile Navigation Fixes */
+      @media (max-width: 991.98px) {
+        .navbar-toggler {
+          border: 2px solid #6c757d;
+          padding: 0.5rem 0.75rem;
+          font-size: 1.25rem;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
 
+        .navbar-toggler:focus {
+          box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25);
+          outline: none;
+        }
+
+        .navbar-toggler .fa-bars {
+          color: #6c757d;
+          font-size: 1.5rem;
+        }
+
+        .navbar-collapse {
+          background-color: rgba(255, 255, 255, 0.98);
+          padding: 1rem;
+          margin-top: 1rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-nav .nav-link {
+          padding: 0.75rem 1rem;
+          border-bottom: 1px solid #e9ecef;
+          color: #495057 !important;
+          font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:last-child {
+          border-bottom: none;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+          background-color: #f8f9fa;
+          color: #0d6efd !important;
+        }
+
+        .navbar-brand img {
+          max-height: 40px;
+        }
+
+        .navbar-brand span {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Mobile Hero/Carousel Optimization */
+      @media (max-width: 768px) {
+        .carousel-caption-1,
+        .carousel-caption-2 {
+          padding: 1rem;
+        }
+
+        .carousel-caption-1-content,
+        .carousel-caption-2-content {
+          max-width: 100% !important;
+        }
+
+        .carousel-caption-1 h1,
+        .carousel-caption-2 h2 {
+          font-size: 1.5rem !important;
+        }
+
+        .carousel-caption-1 p,
+        .carousel-caption-2 p {
+          font-size: 0.9rem !important;
+        }
+
+        .carousel-header img {
+          min-height: 300px;
+          object-fit: cover;
+        }
+      }
+
+      /* Mobile Card Layout */
+      @media (max-width: 767.98px) {
+        .highlight-card {
+          margin-bottom: 1rem;
+        }
+
+        .icon-circle {
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: #0d6efd;
+          color: white;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .icon-circle.bg-success {
+          background-color: #198754 !important;
+        }
+
+        .icon-circle.bg-warning {
+          background-color: #ffc107 !important;
+        }
+      }
+
+      /* Mobile Counter Section */
+      @media (max-width: 768px) {
+        .counter-item h4 {
+          font-size: 0.95rem;
+          min-height: auto;
+        }
+
+        .counter-counting {
+          margin-top: 1rem;
+        }
+      }
+
+      /* Mobile Why Choose Section */
+      @media (max-width: 768px) {
+        .whychoose-item {
+          flex-direction: column;
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+
+        .whychoose-item .icon {
+          margin-bottom: 1rem;
+          margin-right: 0;
+        }
+      }
+
+      /* Mobile Footer */
+      @media (max-width: 768px) {
+        .footer-item {
+          margin-bottom: 2rem;
+        }
+
+        .footer-item h3,
+        .footer-item h4 {
+          font-size: 1.25rem;
+        }
+
+        .footer-item a {
+          font-size: 0.9rem;
+          word-wrap: break-word;
+        }
+      }
+
+      /* Ensure touch targets are large enough */
+      @media (max-width: 768px) {
+        a,
+        button {
+          min-height: 44px;
+          min-width: 44px;
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .btn {
+          padding: 0.75rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Navbar -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <img src="img/logo.webp" alt="Karlin Pharmaceuticals Logo">
-                <span class="text-secondary">Karlin Pharmaceuticals</span>
-            </a>
+      <nav
+        class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+      >
+        <a href="index.html" class="navbar-brand p-0">
+          <img src="img/logo.webp" alt="Karlin Pharmaceuticals Logo" />
+          <span class="text-secondary">Karlin Pharmaceuticals</span>
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="product.html" class="nav-item nav-link">Products</a>
-                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero / Carousel -->
-        <div class="carousel-header">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-
-                <div class="carousel-inner">
-
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <img src="img/home/slide-1.webp" class="img-fluid w-100"
-                            alt="WHO-GMP certified dermatology manufacturing facility">
-
-                        <div class="carousel-caption-1">
-                            <div class="carousel-caption-1-content" style="max-width: 900px;">
-
-                                <!-- SINGLE H1 FOR PAGE -->
-                                <h1 class="display-4 text-white mb-3">
-                                    WHO-GMP Certified Dermatology Manufacturer for Global Markets
-                                </h1>
-
-                                <p class="fs-5 text-white mb-4">
-                                    Specialized in topical dermatology formulations for contract manufacturing
-                                    and export-focused pharmaceutical brands.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <img src="img/home/slide-2.webp" class="img-fluid w-100"
-                            alt="Dermatology product formulation and R&D">
-
-                        <div class="carousel-caption-2">
-                            <div class="carousel-caption-2-content" style="max-width: 900px;">
-                                <h2 class="text-white mb-3">
-                                    Dermatology-Focused Formulation and Manufacturing Expertise
-                                </h2>
-                                <p class="fs-5 text-white">
-                                    Supporting private labels and export partners with scalable,
-                                    compliant dermatology manufacturing.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <img src="img/home/slide-3.webp" class="img-fluid w-100"
-                            alt="Quality-controlled pharmaceutical manufacturing environment">
-
-                        <div class="carousel-caption-1">
-                            <div class="carousel-caption-1-content" style="max-width: 900px;">
-                                <h2 class="text-white mb-3">
-                                    Quality Systems Aligned with International Regulatory Standards
-                                </h2>
-                                <p class="fs-5 text-white">
-                                    Manufacturing processes designed to meet WHO-GMP
-                                    and export compliance requirements.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="product.html" class="nav-item nav-link">Products</a>
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
         </div>
+      </nav>
+
+      <!-- Hero / Carousel -->
+      <div class="carousel-header">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img
+                src="img/home/slide-1.webp"
+                class="img-fluid w-100"
+                alt="WHO-GMP certified dermatology manufacturing facility"
+              />
+
+              <div class="carousel-caption-1">
+                <div
+                  class="carousel-caption-1-content"
+                  style="max-width: 900px"
+                >
+                  <h1 class="display-4 text-white mb-3">
+                    WHO-GMP Certified Dermatology Manufacturer for Global
+                    Markets
+                  </h1>
+
+                  <p class="fs-5 text-white mb-4">
+                    Specialized in topical dermatology formulations for contract
+                    manufacturing and export-focused pharmaceutical brands.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img
+                src="img/home/slide-2.webp"
+                class="img-fluid w-100"
+                alt="Dermatology product formulation and R&D"
+              />
+
+              <div class="carousel-caption-2">
+                <div
+                  class="carousel-caption-2-content"
+                  style="max-width: 900px"
+                >
+                  <h2 class="text-white mb-3">
+                    Dermatology-Focused Formulation and Manufacturing Expertise
+                  </h2>
+                  <p class="fs-5 text-white">
+                    Supporting private labels and export partners with scalable,
+                    compliant dermatology manufacturing.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img
+                src="img/home/slide-3.webp"
+                class="img-fluid w-100"
+                alt="Quality-controlled pharmaceutical manufacturing environment"
+              />
+
+              <div class="carousel-caption-1">
+                <div
+                  class="carousel-caption-1-content"
+                  style="max-width: 900px"
+                >
+                  <h2 class="text-white mb-3">
+                    Quality Systems Aligned with International Regulatory
+                    Standards
+                  </h2>
+                  <p class="fs-5 text-white">
+                    Manufacturing processes designed to meet WHO-GMP and export
+                    compliance requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Key Highlights (section heading only) -->
+    <!-- Key Highlights -->
     <section class="container py-5">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-primary">Key Highlights</h2>
-            <p class="text-muted">Capabilities in Dermatology Manufacturing</p>
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Key Highlights</h2>
+        <p class="text-muted">Capabilities in Dermatology Manufacturing</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card highlight-card text-center p-4">
+            <div class="icon-circle mx-auto">
+              <i class="bi bi-droplet"></i>
+            </div>
+            <h5 class="fw-bold">60+ Dermatology Formulations</h5>
+            <p class="text-muted">
+              Topical dermatology formulations developed for licensed
+              manufacturing and export-oriented pharmaceutical partners.
+            </p>
+          </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card highlight-card text-center p-4">
+            <div class="icon-circle mx-auto bg-success">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h5 class="fw-bold">WHO-GMP Compliant Manufacturing Systems</h5>
+            <p class="text-muted">
+              Manufacturing processes aligned with WHO-GMP, GLP, and ISO quality
+              management requirements.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card highlight-card text-center p-4">
+            <div class="icon-circle mx-auto bg-warning text-dark">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h5 class="fw-bold">Contract & Private-Label Manufacturing</h5>
+            <p class="text-muted">
+              End-to-end dermatology manufacturing support from formulation to
+              finished product packaging.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- About Start -->
+    <div class="container-fluid about overflow-hidden py-5">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="rounded h-100">
+              <img
+                src="img/Gallery/teams-11.webp"
+                class="img-fluid rounded h-auto w-100"
+                style="object-fit: cover"
+                alt="Karlin Pharmaceuticals dermatology manufacturing team"
+              />
+            </div>
+          </div>
 
-   <div class="row g-4">
-  <!-- Card 1 -->
-  <div class="col-md-4">
-    <div class="card highlight-card text-center p-4">
-      <div class="icon-circle mx-auto">
-        <i class="bi bi-droplet"></i>
-      </div>
-      <h5 class="fw-bold">60+ Dermatology Formulations</h5>
-      <p class="text-muted">
-        Topical dermatology formulations developed for licensed manufacturing and
-        export-oriented pharmaceutical partners.
-      </p>
-    </div>
-  </div>
+          <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+            <div class="about-item">
+              <h4 class="text-primary text-uppercase">About Us</h4>
+              <h2 class="display-5 mb-3">
+                Dermatology Manufacturing with International Quality Standards
+              </h2>
 
-  <!-- Card 2 -->
-  <div class="col-md-4">
-    <div class="card highlight-card text-center p-4">
-      <div class="icon-circle mx-auto bg-success">
-        <i class="bi bi-shield-check"></i>
-      </div>
-      <h5 class="fw-bold">WHO-GMP Compliant Manufacturing Systems</h5>
-      <p class="text-muted">
-        Manufacturing processes aligned with WHO-GMP, GLP, and ISO quality
-        management requirements.
-      </p>
-    </div>
-  </div>
+              <p class="mb-4">
+                At <strong>Karlin Pharmaceuticals</strong>, we specialize in the
+                manufacturing of topical dermatology formulations for domestic
+                and international markets. Our operations focus on contract
+                manufacturing, private-label production, and export-ready
+                pharmaceutical supply under regulated quality systems.
+              </p>
 
-  <!-- Card 3 -->
-  <div class="col-md-4">
-    <div class="card highlight-card text-center p-4">
-      <div class="icon-circle mx-auto bg-warning text-dark">
-        <i class="bi bi-globe"></i>
-      </div>
-      <h5 class="fw-bold">Contract & Private-Label Manufacturing</h5>
-      <p class="text-muted">
-        End-to-end dermatology manufacturing support from formulation
-        to finished product packaging.
-      </p>
-    </div>
-  </div>
-</div>
-</section>
-<!-- feature End -->
-
-
-<!-- About Start -->
-<div class="container-fluid about overflow-hidden py-5">
-  <div class="container py-5">
-    <div class="row g-5">
-      <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-        <div class="rounded h-100">
-          <img src="img/Gallery/teams-11.webp"
-               class="img-fluid rounded h-auto w-100"
-               style="object-fit: cover;"
-               alt="Karlin Pharmaceuticals dermatology manufacturing team">
+              <a
+                href="about.html"
+                class="btn btn-secondary rounded-pill py-3 px-5"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
-        <div class="about-item">
-          <h4 class="text-primary text-uppercase">About Us</h4>
+    <!-- Fact Counter -->
+    <div class="container-fluid counter py-5">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="counter-item">
+              <div class="counter-item-icon mx-auto">
+                <i class="fas fa-thumbs-up fa-3x text-white"></i>
+              </div>
+              <h4 class="text-white my-4">
+                Active Clients (India & Export Markets)
+              </h4>
+              <div class="counter-counting">
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >456</span
+                >
+                <span class="h1 fw-bold text-white">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="counter-item">
+              <div class="counter-item-icon mx-auto">
+                <i class="fas fa-truck fa-3x text-white"></i>
+              </div>
+              <h4 class="text-white my-4">
+                Export Registrations / Markets Served
+              </h4>
+              <div class="counter-counting">
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >513</span
+                >
+                <span class="h1 fw-bold text-white">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="counter-item">
+              <div class="counter-item-icon mx-auto">
+                <i class="fas fa-users fa-3x text-white"></i>
+              </div>
+              <h4 class="text-white my-4">Manufacturing & Quality Personnel</h4>
+              <div class="counter-counting">
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >53</span
+                >
+                <span class="h1 fw-bold text-white">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.8s"
+          >
+            <div class="counter-item">
+              <div class="counter-item-icon mx-auto">
+                <i class="fas fa-heart fa-3x text-white"></i>
+              </div>
+              <h4 class="text-white my-4">
+                Years in Dermatology Manufacturing (Since 1997)
+              </h4>
+              <div class="counter-counting">
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >30</span
+                >
+                <span class="h1 fw-bold text-white">+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="whychoose py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Why Karlin?</h2>
+          <p class="text-muted">
+            Manufacturing capabilities built for regulated dermatology markets
+          </p>
+        </div>
+
+        <div class="whychoose-list">
+          <div class="whychoose-item">
+            <div class="icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="content">
+              <h5>Three decades of dermatology manufacturing experience</h5>
+            </div>
+          </div>
+
+          <div class="whychoose-item">
+            <div class="icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="content">
+              <h5>Proven compliance with export and regulatory requirements</h5>
+            </div>
+          </div>
+
+          <div class="whychoose-item">
+            <div class="icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <div class="content">
+              <h5>Ethical and transparent manufacturing governance</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial pb-5">
+      <div class="container pb-5">
+        <div
+          class="text-center mx-auto pb-5 wow fadeInUp"
+          data-wow-delay="0.2s"
+          style="max-width: 800px"
+        >
+          <h4 class="text-uppercase text-primary">Testimonials</h4>
           <h2 class="display-5 mb-3">
-            Dermatology Manufacturing with International Quality Standards
+            Feedback from Business and Healthcare Partners
           </h2>
+        </div>
 
-          <p class="mb-4">
-            At <strong>Karlin Pharmaceuticals</strong>, we specialize in the
-            manufacturing of topical dermatology formulations for domestic and
-            international markets. Our operations focus on contract manufacturing,
-            private-label production, and export-ready pharmaceutical supply
-            under regulated quality systems.
-          </p>
+        <div
+          class="owl-carousel testimonial-carousel wow fadeInUp"
+          data-wow-delay="0.3s"
+        >
+          <div class="testimonial-item text-center p-4">
+            <p>
+              Karlin Pharmaceuticals has consistently demonstrated adherence to
+              quality-controlled manufacturing practices. Their products meet
+              documented standards suitable for institutional healthcare use.
+            </p>
+            <div class="d-flex justify-content-center mb-4">
+              <img
+                src="img/testimonials/testimonial-1.webp"
+                class="img-fluid border border-4 border-primary"
+                style="width: 100px; height: 100px; border-radius: 50px"
+                alt="Hospital healthcare professional testimonial"
+              />
+            </div>
+            <div class="d-block">
+              <h4 class="text-dark">Dr. Meenakshi R</h4>
+              <p class="m-0 pb-3">Senior Physician, Chennai</p>
+            </div>
+          </div>
 
-          <a href="about.html" class="btn btn-secondary rounded-pill py-3 px-5">
-            Read More
-          </a>
+          <div class="testimonial-item text-center p-4">
+            <p>
+              Our experience with Karlin Pharmaceuticals has been positive in
+              terms of manufacturing consistency, documentation, and supply
+              reliability for regulated pharmaceutical distribution.
+            </p>
+            <div class="d-flex justify-content-center mb-4">
+              <img
+                src="img/testimonials/testimonial-2.webp"
+                class="img-fluid border border-4 border-primary"
+                style="width: 100px; height: 100px; border-radius: 50px"
+                alt="Pharmaceutical distribution partner testimonial"
+              />
+            </div>
+            <div class="d-block">
+              <h4 class="text-dark">Ravi Kumar</h4>
+              <p class="m-0 pb-3">Pharmaceutical Distributor, Bangalore</p>
+            </div>
+          </div>
+
+          <div class="testimonial-item text-center p-4">
+            <p>
+              The company's focus on safety, documentation, and quality
+              assurance provides confidence in the consistency of their
+              manufactured products.
+            </p>
+            <div class="d-flex justify-content-center mb-4">
+              <img
+                src="img/testimonials/testimonial-3.webp"
+                class="img-fluid border border-4 border-primary"
+                style="width: 100px; height: 100px; border-radius: 50px"
+                alt="End-user quality assurance feedback"
+              />
+            </div>
+            <div class="d-block">
+              <h4 class="text-dark">Priya S</h4>
+              <p class="m-0 pb-3">End User, Chennai</p>
+            </div>
+          </div>
+
+          <div class="testimonial-item text-center p-4">
+            <p>
+              Karlin Pharmaceuticals has shown professionalism in supply
+              coordination, compliance documentation, and transparency in
+              business engagement.
+            </p>
+            <div class="d-flex justify-content-center mb-4">
+              <img
+                src="img/testimonials/testimonial-4.webp"
+                class="img-fluid border border-4 border-primary"
+                style="width: 100px; height: 100px; border-radius: 50px"
+                alt="Retail pharmacy partner testimonial"
+              />
+            </div>
+            <div class="d-block">
+              <h4 class="text-dark">Anita Verma</h4>
+              <p class="m-0 pb-3">Pharmacy Partner, Mumbai</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!-- About End -->
 
-
-<!-- Fact Counter -->
-<div class="container-fluid counter py-5">
-  <div class="container py-5">
-    <div class="row g-5">
-
-      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="counter-item">
-          <div class="counter-item-icon mx-auto">
-            <i class="fas fa-thumbs-up fa-3x text-white"></i>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+      <div class="container py-5">
+        <div class="row g-5 mb-5 justify-content-end align-items-center">
+          <div class="col-lg-5">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-end"
+            >
+              <a
+                class="btn btn-secondary btn-md-square rounded-circle me-3"
+                href="https://www.facebook.com/karlinpharmaceuticals"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="btn btn-secondary btn-md-square rounded-circle me-3"
+                href="https://twitter.com/karlinpharma"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                class="btn btn-secondary btn-md-square rounded-circle me-3"
+                href="https://www.instagram.com/karlinpharmaceuticals"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                class="btn btn-secondary btn-md-square rounded-circle me-0"
+                href="https://www.linkedin.com/company/karlinpharmaceuticals"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
-          <h4 class="text-white my-4">
-            Active Clients (India & Export Markets)
-          </h4>
-          <div class="counter-counting">
-            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">456</span>
-            <span class="h1 fw-bold text-white">+</span>
+        </div>
+
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h3 class="text-white mb-4">Karlin Pharmaceuticals</h3>
+              <p class="mb-3">
+                Karlin Pharmaceuticals is a dermatology-focused pharmaceutical
+                manufacturer specializing in topical formulations for contract
+                manufacturing and export-oriented markets. Operations are
+                conducted under regulated quality management systems aligned
+                with international standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="text-white mb-4">Quick Links</h4>
+              <a href="product.html"
+                ><i class="fas fa-angle-right me-2"></i> Products</a
+              >
+              <a href="service.html"
+                ><i class="fas fa-angle-right me-2"></i> Services</a
+              >
+              <a href="gallery.html"
+                ><i class="fas fa-angle-right me-2"></i> Gallery</a
+              >
+              <a href="about.html"
+                ><i class="fas fa-angle-right me-2"></i> About</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="text-white mb-4">Business Hours</h4>
+              <div class="mb-3">
+                <h6 class="text-light mb-0">Monday – Friday</h6>
+                <p class="text-white mb-0">09:00 AM – 07:00 PM</p>
+              </div>
+              <div class="mb-3">
+                <h6 class="text-light mb-0">Saturday</h6>
+                <p class="text-white mb-0">10:00 AM – 05:00 PM</p>
+              </div>
+              <div class="mb-3">
+                <h6 class="text-light">Sunday</h6>
+                <p class="text-white mb-0">Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="text-white mb-4">Contact Information</h4>
+              <a
+                href="https://maps.google.com/?q=Plot+No+15,SFNo.227,SIDCO+Industrial+Estate,+Thirumudivakkam+Kancheepuram+-44+Tamil+Nadu,+INDIA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-map-marker-alt me-2"></i>
+                Plot No. 15, SF No. 227, SIDCO Industrial Estate,
+                Thirumudivakkam, Kancheepuram – 600044, Tamil Nadu, India
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@karlinpharmaceuticals.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-envelope me-2"></i>
+                info@karlinpharmaceuticals.com
+              </a>
+              <a href="tel:+914445820395">
+                <i class="fas fa-phone me-2"></i>
+                +91 44 4582 0395
+              </a>
+              <a href="tel:+917358183156">
+                <i class="fas fa-phone me-2"></i>
+                +91 73581 83156
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-        <div class="counter-item">
-          <div class="counter-item-icon mx-auto">
-            <i class="fas fa-truck fa-3x text-white"></i>
-          </div>
-          <h4 class="text-white my-4">
-            Export Registrations / Markets Served
-          </h4>
-          <div class="counter-counting">
-            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
-            <span class="h1 fw-bold text-white">+</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-        <div class="counter-item">
-          <div class="counter-item-icon mx-auto">
-            <i class="fas fa-users fa-3x text-white"></i>
-          </div>
-          <h4 class="text-white my-4">
-            Manufacturing & Quality Personnel
-          </h4>
-          <div class="counter-counting">
-            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">53</span>
-            <span class="h1 fw-bold text-white">+</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-        <div class="counter-item">
-          <div class="counter-item-icon mx-auto">
-            <i class="fas fa-heart fa-3x text-white"></i>
-          </div>
-          <h4 class="text-white my-4">
-            Years in Dermatology Manufacturing (Since 1997)
-          </h4>
-          <div class="counter-counting">
-            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">30</span>
-            <span class="h1 fw-bold text-white">+</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- Fact Counter End -->
-
-
-<section class="whychoose py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Why Karlin?</h2>
-      <p class="text-muted">
-        Manufacturing capabilities built for regulated dermatology markets
-      </p>
-    </div>
-
-    <div class="whychoose-list">
-
-      <div class="whychoose-item">
-        <div class="icon">
-          <i class="fas fa-certificate"></i>
-        </div>
-        <div class="content">
-          <h5>Three decades of dermatology manufacturing experience</h5>
-        </div>
-      </div>
-
-      <div class="whychoose-item">
-        <div class="icon">
-          <i class="fas fa-check-circle"></i>
-        </div>
-        <div class="content">
-          <h5>Proven compliance with export and regulatory requirements</h5>
-        </div>
-      </div>
-
- <!-- Item 4 -->
-<div class="whychoose-item">
-  <div class="icon">
-    <i class="fas fa-shipping-fast"></i>
-  </div>
-  <div class="content">
-    <h5>Ethical and transparent manufacturing governance</h5>
-  </div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- Team Section -->
-<!--
-NOTE:
-Team section intentionally commented out.
-Before enabling, remove:
-- Incorrect SEO-related headings
-- <h1> usage
-- Placeholder names
--->
-
-
-<!-- Testimonial Start -->
-<div class="container-fluid testimonial pb-5">
-  <div class="container pb-5">
-    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-      <h4 class="text-uppercase text-primary">Testimonials</h4>
-      <h2 class="display-5 mb-3">Feedback from Business and Healthcare Partners</h2>
     </div>
 
-    <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
-
-      <div class="testimonial-item text-center p-4">
-        <p>
-          Karlin Pharmaceuticals has consistently demonstrated adherence to
-          quality-controlled manufacturing practices. Their products meet
-          documented standards suitable for institutional healthcare use.
-        </p>
-        <div class="d-flex justify-content-center mb-4">
-          <img src="img/testimonials/testimonial-1.webp"
-               class="img-fluid border border-4 border-primary"
-               style="width: 100px; height: 100px; border-radius: 50px;"
-               alt="Hospital healthcare professional testimonial">
-        </div>
-        <div class="d-block">
-          <h4 class="text-dark">Dr. Meenakshi R</h4>
-          <p class="m-0 pb-3">Senior Physician, Chennai</p>
-        </div>
-      </div>
-
-      <div class="testimonial-item text-center p-4">
-        <p>
-          Our experience with Karlin Pharmaceuticals has been positive in terms
-          of manufacturing consistency, documentation, and supply reliability
-          for regulated pharmaceutical distribution.
-        </p>
-        <div class="d-flex justify-content-center mb-4">
-          <img src="img/testimonials/testimonial-2.webp"
-               class="img-fluid border border-4 border-primary"
-               style="width: 100px; height: 100px; border-radius: 50px;"
-               alt="Pharmaceutical distribution partner testimonial">
-        </div>
-        <div class="d-block">
-          <h4 class="text-dark">Ravi Kumar</h4>
-          <p class="m-0 pb-3">Pharmaceutical Distributor, Bangalore</p>
-        </div>
-      </div>
-
-      <div class="testimonial-item text-center p-4">
-        <p>
-          The company’s focus on safety, documentation, and quality assurance
-          provides confidence in the consistency of their manufactured products.
-        </p>
-        <div class="d-flex justify-content-center mb-4">
-          <img src="img/testimonials/testimonial-3.webp"
-               class="img-fluid border border-4 border-primary"
-               style="width: 100px; height: 100px; border-radius: 50px;"
-               alt="End-user quality assurance feedback">
-        </div>
-        <div class="d-block">
-          <h4 class="text-dark">Priya S</h4>
-          <p class="m-0 pb-3">End User, Chennai</p>
-        </div>
-      </div>
-
-      <div class="testimonial-item text-center p-4">
-        <p>
-          Karlin Pharmaceuticals has shown professionalism in supply coordination,
-          compliance documentation, and transparency in business engagement.
-        </p>
-        <div class="d-flex justify-content-center mb-4">
-          <img src="img/testimonials/testimonial-4.webp"
-               class="img-fluid border border-4 border-primary"
-               style="width: 100px; height: 100px; border-radius: 50px;"
-               alt="Retail pharmacy partner testimonial">
-        </div>
-        <div class="d-block">
-          <h4 class="text-dark">Anita Verma</h4>
-          <p class="m-0 pb-3">Pharmacy Partner, Mumbai</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- Testimonial End -->
-
-<!-- Footer Start -->
-<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-  <div class="container py-5">
-    <div class="row g-5 mb-5 justify-content-end align-items-center">
-
-      <div class="col-lg-5">
-        <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-          <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://www.facebook.com/karlinpharmaceuticals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://twitter.com/karlinpharma" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://www.instagram.com/karlinpharmaceuticals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a class="btn btn-secondary btn-md-square rounded-circle me-0" href="https://www.linkedin.com/company/karlinpharmaceuticals" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="row g-5">
-
-      <div class="col-md-6 col-lg-6 col-xl-3">
-        <div class="footer-item d-flex flex-column">
-          <h3 class="text-white mb-4">Karlin Pharmaceuticals</h3>
-          <p class="mb-3">
-            Karlin Pharmaceuticals is a dermatology-focused pharmaceutical
-            manufacturer specializing in topical formulations for contract
-            manufacturing and export-oriented markets. Operations are conducted
-            under regulated quality management systems aligned with international
-            standards.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-6 col-xl-3">
-        <div class="footer-item d-flex flex-column">
-          <h4 class="text-white mb-4">Quick Links</h4>
-          <a href="product.html"><i class="fas fa-angle-right me-2"></i> Products</a>
-          <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
-          <a href="gallery.html"><i class="fas fa-angle-right me-2"></i> Gallery</a>
-          <a href="about.html"><i class="fas fa-angle-right me-2"></i> About</a>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-6 col-xl-3">
-        <div class="footer-item d-flex flex-column">
-          <h4 class="text-white mb-4">Business Hours</h4>
-          <div class="mb-3">
-            <h6 class="text-light mb-0">Monday – Friday</h6>
-            <p class="text-white mb-0">09:00 AM – 07:00 PM</p>
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-md-0">
+            <span class="text-light">
+              <span id="date" class="text-white"></span>
+              <span class="text-white">
+                <i class="fas fa-copyright text-light me-2"></i>
+                Karlin Pharmaceuticals </span
+              >, All rights reserved.
+            </span>
           </div>
-          <div class="mb-3">
-            <h6 class="text-light mb-0">Saturday</h6>
-            <p class="text-white mb-0">10:00 AM – 05:00 PM</p>
-          </div>
-          <div class="mb-3">
-            <h6 class="text-light">Sunday</h6>
-            <p class="text-white mb-0">Closed</p>
+          <div class="col-md-6 text-center text-md-end text-body">
+            Designed by
+            <a class="text-white" href="https://vimkes.com/" target="_blank">
+              Vimkes Technologies
+            </a>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-6 col-xl-3">
-        <div class="footer-item d-flex flex-column">
-          <h4 class="text-white mb-4">Contact Information</h4>
-          <a href="https://maps.google.com/?q=Plot+No+15,SFNo.227,SIDCO+Industrial+Estate,+Thirumudivakkam+Kancheepuram+-44+Tamil+Nadu,+INDIA" target="_blank" rel="noopener noreferrer">
-            <i class="fa fa-map-marker-alt me-2"></i>
-            Plot No. 15, SF No. 227, SIDCO Industrial Estate,
-            Thirumudivakkam, Kancheepuram – 600044,
-            Tamil Nadu, India
-          </a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@karlinpharmaceuticals.com" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-envelope me-2"></i>
-            info@karlinpharmaceuticals.com
-          </a>
-          <a href="tel:+914445820395">
-            <i class="fas fa-phone me-2"></i>
-            +91 44 4582 0395
-          </a>
-          <a href="tel:+917358183156">
-            <i class="fas fa-phone me-2"></i>
-            +91 73581 83156
-          </a>
-        </div>
-      </div>
-
     </div>
-  </div>
-</div>
-<!-- Footer End -->
 
-
-<!-- Copyright Start -->
-<div class="container-fluid copyright py-4">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-md-6 text-center text-md-start mb-md-0">
-        <span class="text-light">
-          <span id="date" class="text-white"></span>
-          <span class="text-white">
-            <i class="fas fa-copyright text-light me-2"></i>
-            Karlin Pharmaceuticals
-          </span>,
-          All rights reserved.
-        </span>
-      </div>
-      <div class="col-md-6 text-center text-md-end text-body">
-        Designed by
-        <a class="text-white" href="https://vimkes.com/" target="_blank">
-          Vimkes Technologies
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Copyright End -->
-
+    <!-- JavaScript Libraries - MUST BE IN THIS ORDER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+  </body>
+</html>
