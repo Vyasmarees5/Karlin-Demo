@@ -13,13 +13,13 @@ const PORT = process.env.PORT || 3000;
 app.use(
   cors({
     origin: [
-      "https://karlinpharmaceuticals.com",
       "https://karlin-pharmaceuticals.netlify.app",
+      "https://karlinpharmaceuticals.com",
       "http://localhost:3000",
       "http://localhost:5500",
       "http://127.0.0.1:5500",
     ],
-    methods: ["POST", "OPTIONS"],
+    methods: ["POST"],
     allowedHeaders: ["Content-Type"],
   }),
 );
