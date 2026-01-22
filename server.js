@@ -14,13 +14,14 @@ app.use(
   cors({
     origin: [
       "https://karlinpharmaceuticals.com",
+      "https://karlin-pharmaceuticals.netlify.app",
       "http://localhost:3000",
       "http://localhost:5500",
       "http://127.0.0.1:5500",
     ],
-    methods: ["POST"],
+    methods: ["POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
-  })
+  }),
 );
 
 // Body Parsing Middleware
@@ -232,7 +233,7 @@ Submitted on: ${new Date().toLocaleString("en-IN", {
           process.env.NODE_ENV === "development" ? error.message : undefined,
       });
     }
-  }
+  },
 );
 
 // Health check endpoint (Not rate limited)
@@ -279,12 +280,12 @@ app.listen(PORT, () => {
   console.log(`📧 Server running on: http://localhost:${PORT}`);
   console.log(`📋 Health check: http://localhost:${PORT}/health`);
   console.log(
-    `📮 Email endpoint: POST http://localhost:${PORT}/api/send-email`
+    `📮 Email endpoint: POST http://localhost:${PORT}/api/send-email`,
   );
   console.log(`🛡️  Rate Limiter: Enabled (5 requests / 15 mins)`);
   console.log(`🔒 Security: Express Validator Active`);
   console.log(
-    `📬 Sending emails to: ${process.env.TO_EMAIL || "NOT CONFIGURED"}`
+    `📬 Sending emails to: ${process.env.TO_EMAIL || "NOT CONFIGURED"}`,
   );
   console.log("=".repeat(60) + "\n");
 });
