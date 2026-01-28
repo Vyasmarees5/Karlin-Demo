@@ -50,6 +50,66 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/custom.style.css" rel="stylesheet" />
     <link href="css/custom2.css" rel="stylesheet" />
+
+    <style>
+      /* Custom Modal Styles */
+      .modal-backdrop.show {
+        opacity: 0.7;
+      }
+
+      .custom-modal .modal-content {
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .custom-modal .modal-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border: none;
+      }
+
+      .custom-modal .modal-header .btn-close {
+        filter: brightness(0) invert(1);
+      }
+
+      .custom-modal .modal-body {
+        padding: 30px;
+      }
+
+      .custom-modal .modal-icon {
+        font-size: 60px;
+        color: #667eea;
+        margin-bottom: 20px;
+      }
+
+      .custom-modal .modal-title {
+        font-weight: 600;
+      }
+
+      .custom-modal .modal-text {
+        color: #6c757d;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .custom-modal .btn-contact {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .custom-modal .btn-contact:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+      }
+    </style>
   </head>
 
   <body>
@@ -175,6 +235,46 @@
     </div>
     <!-- ***** Whatsapp pop up end ***** -->
 
+    <!-- Modal for Catalogue Not Available -->
+    <div
+      class="modal fade custom-modal"
+      id="catalogueModal"
+      tabindex="-1"
+      aria-labelledby="catalogueModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="catalogueModalLabel">
+              Product Catalogue Not Available
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <i class="bi bi-file-earmark-excel modal-icon"></i>
+            <p class="modal-text">
+              The product catalogue for
+              <strong id="productNameModal"></strong> is currently not
+              available. Please contact us for more details about this product.
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary btn-contact"
+              onclick="contactForProduct()"
+            >
+              <i class="bi bi-envelope me-2"></i>Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Service Start -->
     <div class="container-fluid service bg-light overflow-hidden py-5">
       <div class="container py-5">
@@ -275,9 +375,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'Landex - Clotrimazole 1% Cream',
+                      'catalogue/Landex.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -316,9 +420,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit-G.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'Landex-BG - Clotrimazole Beclomethasone Neomycin Cream',
+                      'catalogue/Landex-BG.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -357,9 +465,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'CLONIT - Clotrimazole Beclomethasone Neomycin Cream',
+                      'catalogue/Clonit.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -396,9 +508,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit-G.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'CLONIT-G - Clobetasol Neomycin Cream',
+                      'catalogue/Clonit-G.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -437,9 +553,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit-GM.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'CLONIT-GM - Clobetasol Miconazole Neomycin Cream',
+                      'catalogue/Clonit-GM.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -478,9 +598,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit-S.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'CLONIT-S - Clobetasol Salicylic Acid Ointment',
+                      'catalogue/Clonit-S.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -490,7 +614,7 @@
           </div>
         </div>
 
-        <!-- Product 8 -->
+        <!-- Product 7 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -520,9 +644,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Dipnate-NG.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'DIPNATE-G - Beclomethasone Gentamicin Cream',
+                      'catalogue/Dipnate-NG.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -532,7 +660,7 @@
           </div>
         </div>
 
-        <!-- Product 9 -->
+        <!-- Product 8 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -561,9 +689,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Dipnate-N.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'DIPNATE - Beclomethasone Dipropionate Cream',
+                      'catalogue/Dipnate-N.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -573,7 +705,7 @@
           </div>
         </div>
 
-        <!-- Product 10 -->
+        <!-- Product 9 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -603,9 +735,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Dipnate-N.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'DIPNATE-PLUS - Beclomethasone Zinc Sulphate Lotion',
+                      'catalogue/Dipnate-N.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -615,7 +751,7 @@
           </div>
         </div>
 
-        <!-- Product 11 -->
+        <!-- Product 10 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -645,9 +781,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Diprosal.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'DIPROSAL - Beclomethasone Salicylic Acid Ointment',
+                      'catalogue/Diprosal.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -657,7 +797,7 @@
           </div>
         </div>
 
-        <!-- Product 12 -->
+        <!-- Product 11 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -688,9 +828,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Dipnate-GM.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'DIPNATE-GM - Beclomethasone Miconazole Gentamicin Zinc Cream',
+                      'catalogue/Dipnate-GM.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -700,7 +844,7 @@
           </div>
         </div>
 
-        <!-- Product 13 -->
+        <!-- Product 12 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -730,9 +874,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Dipnate-N.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'DIPNATE-N - Beclomethasone Neomycin Zinc Cream',
+                      'catalogue/Dipnate-N.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -742,7 +890,7 @@
           </div>
         </div>
 
-        <!-- Product 14 -->
+        <!-- Product 13 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -767,9 +915,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Diprosal.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'SALID-12 - Salicylic Acid 12% Ointment',
+                      'catalogue/Diprosal.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -779,7 +931,7 @@
           </div>
         </div>
 
-        <!-- Product 15 -->
+        <!-- Product 14 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -806,9 +958,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Micolin.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'MICOLIN - Miconazole Nitrate 2% Cream',
+                      'catalogue/Micolin.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -818,7 +974,7 @@
           </div>
         </div>
 
-        <!-- Product 16 -->
+        <!-- Product 15 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -841,9 +997,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Karket.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'KARKET - Ketoconazole 2% Cream',
+                      'catalogue/Karket.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -853,7 +1013,7 @@
           </div>
         </div>
 
-        <!-- Product 17 -->
+        <!-- Product 16 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -880,9 +1040,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'ICLOP - Ciclopirox Olamine 1% Cream',
+                      'catalogue/ICLOP.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -892,7 +1056,7 @@
           </div>
         </div>
 
-        <!-- Product 18 -->
+        <!-- Product 17 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -915,9 +1079,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'LULIKAR - Luliconazole 1% Cream',
+                      'catalogue/LULIKAR.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -927,7 +1095,7 @@
           </div>
         </div>
 
-        <!-- Product 19 -->
+        <!-- Product 18 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -956,9 +1124,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Clonit.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'TERKAR - Terbinafine Hydrochloride 1% Cream',
+                      'catalogue/TERKAR.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -970,7 +1142,7 @@
       </div>
     </section>
 
-    <!-- Fact Counter -->
+    <!-- Antimicrobial Products Section -->
 
     <section class="container py-5">
       <div class="text-center mb-5">
@@ -1005,9 +1177,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Podine.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'Podine - Povidone Iodine 5% Ointment',
+                      'catalogue/Podine.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1047,9 +1223,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Podine-M.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'Podine-M - Povidone Iodine Tinidazole Sucralfate Ointment',
+                      'catalogue/Podine-M.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1082,9 +1262,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Namsone.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'MUKACIN - Mupirocin 2% Ointment',
+                      'catalogue/MUKACIN.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1117,9 +1301,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Fusep.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'FUSEP - Fusidic Acid 2% Cream',
+                      'catalogue/Fusep.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1159,9 +1347,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Fusep-B.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'FUSEP-B - Fusidic Acid Beclomethasone Cream',
+                      'catalogue/Fusep-B.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1202,9 +1394,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Namsone.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'Fyngel - Diclofenac Methyl Salicylate Pain Relief Cream',
+                      'catalogue/Fyngel.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1216,6 +1412,7 @@
       </div>
     </section>
 
+    <!-- Hyperpigmentation Products Section -->
     <section class="container py-5">
       <div class="text-center mb-5">
         <p class="text-muted">Hyperpigmentation & Emollient Ranges</p>
@@ -1247,9 +1444,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Namsone.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'Pinkquin - Hydroquinone 2% Cream',
+                      'catalogue/Pinkquin.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1259,7 +1460,7 @@
           </div>
         </div>
 
-        <!-- Product 3 -->
+        <!-- Product 2 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -1289,9 +1490,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Misti.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'MISTI - Urea Lactic Acid Emollient Cream',
+                      'catalogue/Misti.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1301,7 +1506,7 @@
           </div>
         </div>
 
-        <!-- Product 4 -->
+        <!-- Product 3 -->
         <div class="col-lg-3 col-md-6">
           <div class="card h-100 border-0 shadow-lg rounded-3 overflow-hidden">
             <img
@@ -1331,9 +1536,13 @@
                   >Enquire Now</a
                 >
                 <a
-                  href="catalogue/Momkar-S.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="javascript:void(0)"
+                  onclick="
+                    viewBrochure(
+                      'SOFKAR - Liquid Paraffin White Soft Paraffin Emollient',
+                      'catalogue/SOFKAR.pdf',
+                    )
+                  "
                   class="btn btn-outline-secondary btn-sm"
                 >
                   <i class="bi bi-file-earmark-pdf"></i> View Brochure
@@ -1345,7 +1554,7 @@
       </div>
     </section>
 
-    <!-- Testimonial Start -->
+    <!-- Certifications Section -->
     <section class="container py-5">
       <div class="text-center mb-5">
         <h2 class="fw-bold text-uppercase">
@@ -1412,8 +1621,8 @@
         </div>
       </div>
     </section>
-    <!-- Testimonial End -->
 
+    <!-- CTA Section -->
     <section class="py-5 bg-primary text-white text-center">
       <div class="container">
         <h2 class="fw-bold mb-3">
@@ -1516,16 +1725,15 @@
             <div class="footer-item d-flex flex-column">
               <h4 class="text-white mb-4">Business Hours</h4>
               <div class="mb-3">
-                <h6 class="text-body mb-0">Mon – Friday:</h6>
+                <h6 class="text-body mb-0">Mon – Friday</h6>
                 <p class="text-white mb-0">09.00 am to 07.00 pm</p>
               </div>
               <div class="mb-3">
-                <h6 class="text-body mb-0">Saturday:</h6>
+                <h6 class="text-body mb-0">Saturday</h6>
                 <p class="text-white mb-0">10.00 am to 05.00 pm</p>
               </div>
               <div class="mb-3">
-                <h6 class="text-body mb-0">Holidays:</h6>
-                <p class="text-white mb-0">We are closed on Sundays</p>
+                <h6 class="text-body mb-0">Sunday Closed</h6>
               </div>
             </div>
           </div>
@@ -1604,9 +1812,30 @@
     <script src="js/main.js"></script>
     <script src="js/custom.js"></script>
     <script>
+      // Define the list of available catalogues (exact filenames from the catalogue folder)
+      const availableCatalogues = [
+        "catalogue/Clonit-G.pdf",
+        "catalogue/Clonit-GM.pdf",
+        "catalogue/Clonit-S.pdf",
+        "catalogue/Clonit.pdf",
+        "catalogue/Dipnate-GM.pdf",
+        "catalogue/Dipnate-N.pdf",
+        "catalogue/Dipnate-NG.pdf",
+        "catalogue/Diprosal.pdf",
+        "catalogue/Fusep-B.pdf",
+        "catalogue/Fusep.pdf",
+        "catalogue/Karket.pdf",
+        "catalogue/Micolin.pdf",
+        "catalogue/Misti.pdf",
+        "catalogue/Momkar-S.pdf",
+        "catalogue/Namsone.pdf",
+        "catalogue/Podine-M.pdf",
+        "catalogue/Podine.pdf",
+      ];
+
       // WhatsApp integration functions
       function enquireOnWhatsApp(productName) {
-        const phoneNumber = "917358183156"; // Karlin Pharmaceuticals WhatsApp number
+        const phoneNumber = "917358183156";
         const message =
           productName && productName !== "Product"
             ? `Hi, I am here to enquire about product: ${productName}`
@@ -1614,6 +1843,33 @@
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, "_blank");
+      }
+
+      function viewBrochure(productName, cataloguePath) {
+        // Check if catalogue exists in available list
+        if (availableCatalogues.includes(cataloguePath)) {
+          // Open the catalogue in a new tab
+          window.open(cataloguePath, "_blank");
+        } else {
+          // Show modal for catalogue not available
+          document.getElementById("productNameModal").textContent = productName;
+          const modal = new bootstrap.Modal(
+            document.getElementById("catalogueModal"),
+          );
+          modal.show();
+        }
+      }
+
+      function contactForProduct() {
+        // Close the modal
+        const modal = bootstrap.Modal.getInstance(
+          document.getElementById("catalogueModal"),
+        );
+        if (modal) {
+          modal.hide();
+        }
+        // Redirect to contact page
+        window.location.href = "contact.html";
       }
 
       function requestProductCatalogue() {
