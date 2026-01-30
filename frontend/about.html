@@ -49,8 +49,43 @@
     />
 
     <!-- Template Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custom.style.css" rel="stylesheet" />
     <link href="css/custom2.css" rel="stylesheet" />
+
+    <!-- ⭐ ADDED: Prevents names from wrapping ⭐ -->
+    <style>
+      /* Keep all names on one line - no wrapping */
+      h4.fw-bold,
+      h4.mb-0.fw-bold {
+        white-space: nowrap !important;
+      }
+
+      /* Tablet: slightly smaller font */
+      @media (max-width: 768px) {
+        h4.fw-bold,
+        h4.mb-0.fw-bold {
+          font-size: 1.15rem;
+        }
+      }
+
+      /* Mobile: smaller font to fit */
+      @media (max-width: 576px) {
+        h4.fw-bold,
+        h4.mb-0.fw-bold {
+          font-size: 1rem;
+        }
+      }
+
+      /* Very small phones: even smaller */
+      @media (max-width: 380px) {
+        h4.fw-bold,
+        h4.mb-0.fw-bold {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -74,12 +109,13 @@
       <nav
         class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
       >
-        <a href="" class="navbar-brand p-0">
-          <!-- <h1 class="text-primary">Karlin Pharmaceuticals</h1> -->
-          <img src="img/logo.webp" alt="Logo" /><span class="text-secondary"
-            >Karlin Pharmaceuticals</span
-          >
+        <a href="index.html" class="navbar-brand p-0">
+          <img src="img/logo.webp" alt="Karlin Pharmaceuticals Logo" />
+          <span class="brand-text">
+            Karlin Pharmaceuticals and Exports Private Limited
+          </span>
         </a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -375,7 +411,7 @@
 
     <div class="container my-5">
       <h4 class="text-uppercase text-primary text-center">
-        From the MD’s Desk
+        From the MD's Desk
       </h4>
       <h1 class="display-3 text-capitalize mb-3">Greetings from Karlin!</h1>
 

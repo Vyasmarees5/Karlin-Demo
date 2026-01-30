@@ -1,0 +1,49 @@
+/* ========================================
+   FIX: Keep All Names on One Line
+   Applied to About Page (Team/Management)
+   ======================================== */
+
+/* Target all name headings - prevent line wrapping */
+h4.fw-bold,
+h4.mb-0.fw-bold,
+.team-name {
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* Ensure the container allows the name to display properly */
+.text-center h4.fw-bold,
+.text-center h4.mb-0.fw-bold {
+  display: inline-block;
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  h4.fw-bold,
+  h4.mb-0.fw-bold,
+  .team-name {
+    white-space: nowrap !important;
+    font-size: 1.15rem; /* Slightly smaller for better fit */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 576px) {
+  h4.fw-bold,
+  h4.mb-0.fw-bold,
+  .team-name {
+    white-space: nowrap !important;
+    font-size: 1rem; /* Even smaller for small screens */
+  }
+}
+
+/* Extra small devices (very small phones) */
+@media (max-width: 380px) {
+  h4.fw-bold,
+  h4.mb-0.fw-bold,
+  .team-name {
+    white-space: nowrap !important;
+    font-size: 0.9rem; /* Smallest size for tiny screens */
+  }
+}
