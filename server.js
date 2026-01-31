@@ -35,11 +35,12 @@ app.use(
     origin: [
       "https://karlin-pharmaceuticals.netlify.app",
       "https://karlinpharmaceuticals.com",
+      "https://www.karlinpharmaceuticals.com",
       "http://localhost:3000",
       "http://localhost:5500",
       "http://127.0.0.1:5500",
     ],
-    methods: ["POST"],
+    methods: ["POST", "GET"],
     allowedHeaders: ["Content-Type"],
   }),
 );
@@ -55,7 +56,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // ==========================================
 const emailLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // Limit each IP to 5 requests per windowMs
+  max: 10, // Increased from 5 to 10 for better UX
   message: {
     success: false,
     message:
@@ -103,6 +104,15 @@ app.post(
   // 3. Process the Request
   async (req, res) => {
     try {
+      // ===== HONEYPOT CHECK (Bot Prevention) =====
+      if (req.body.website) {
+        console.log("🤖 Bot detected via honeypot field");
+        return res.status(200).json({
+          success: true,
+          message: "Email sent successfully",
+        });
+      }
+
       // Check for Validation Errors
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
@@ -258,7 +268,7 @@ app.get("/health", (req, res) => {
 app.get("/", (req, res) => {
   res.json({
     message: "Karlin Pharmaceuticals Email API",
-    version: "2.0.0",
+    version: "2.1.0",
     emailProvider: "Brevo HTTP API (No SMTP)",
     endpoints: {
       health: "GET /health",
@@ -282,15 +292,15 @@ app.use((req, res) => {
 // ==========================================
 app.listen(PORT, () => {
   console.log("\n" + "=".repeat(60));
-  console.log("🚀 KARLIN PHARMACEUTICALS EMAIL SERVER");
+  console.log("🚀 KARLIN PHARMACEUTICALS EMAIL SERVER v2.1.0");
   console.log("=".repeat(60));
   console.log(`📧 Server running on: http://localhost:${PORT}`);
   console.log(`📋 Health check: http://localhost:${PORT}/health`);
   console.log(
     `📮 Email endpoint: POST http://localhost:${PORT}/api/send-email`,
   );
-  console.log(`🛡️  Rate Limiter: Enabled (5 requests / 15 mins)`);
-  console.log(`🔒 Security: Express Validator Active`);
+  console.log(`🛡️  Rate Limiter: Enabled (10 requests / 15 mins)`);
+  console.log(`🔒 Security: Express Validator + Honeypot Active`);
   console.log(`📬 Email Provider: Brevo HTTP API (No SMTP)`);
   console.log(
     `📬 Sending emails to: ${process.env.TO_EMAIL || "NOT CONFIGURED"}`,

@@ -624,8 +624,14 @@
             } catch (error) {
               // Network or Logic Error
               console.error("Submission Error:", error);
-              errorText.innerText =
-                error.message || "Connection failed. Is the server running?";
+              // Better rate limit detection
+              if (error.message.includes("Too many requests")) {
+                errorText.innerText =
+                  "Please wait 15 minutes before submitting again.";
+              } else {
+                errorText.innerText =
+                  error.message || "Connection failed. Please try again.";
+              }
               errorAlert.style.display = "block";
               errorAlert.scrollIntoView({
                 behavior: "smooth",
