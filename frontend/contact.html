@@ -279,7 +279,7 @@
                   </div>
                 </div>
 
-                <!-- Honeypot field for spam prevention -->
+                <!-- Honeypot field for spam prevention (INVISIBLE TO USERS) -->
                 <input
                   type="text"
                   name="website"
@@ -389,25 +389,37 @@
             >
               <a
                 class="btn btn-secondary btn-md-square rounded-circle me-3"
-                href="javascript:void(0)"
+                href="https://www.facebook.com/karlinpharmaceuticals"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
               <a
                 class="btn btn-secondary btn-md-square rounded-circle me-3"
-                href="javascript:void(0)"
+                href="https://twitter.com/karlinpharma"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
               >
                 <i class="fab fa-twitter"></i>
               </a>
               <a
                 class="btn btn-secondary btn-md-square rounded-circle me-3"
-                href="javascript:void(0)"
+                href="https://www.instagram.com/karlinpharmaceuticals"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <i class="fab fa-instagram"></i>
               </a>
               <a
                 class="btn btn-secondary btn-md-square rounded-circle me-0"
-                href="javascript:void(0)"
+                href="https://www.linkedin.com/company/karlinpharmaceuticals"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <i class="fab fa-linkedin-in"></i>
               </a>
@@ -520,13 +532,10 @@
 
     <script>
       // ==========================================
-      // CONFIGURATION
+      // PRODUCTION CONFIGURATION v2.1
       // ==========================================
-      // 1. For Testing on your computer: use 'http://localhost:3000/api/send-email'
-      // 2. For LIVE Website: Replace this URL with your Render/Railway/Vercel backend URL
       const BACKEND_URL =
         "https://karlin-email-backend.onrender.com/api/send-email";
-
       // ==========================================
 
       // Toggle email options dropdown
@@ -557,7 +566,7 @@
         alert("Email address copied to clipboard");
       }
 
-      // Form submission handler
+      // Form submission handler with improved error handling
       document.addEventListener("DOMContentLoaded", function () {
         const contactForm = document.getElementById("contactForm");
 
@@ -582,7 +591,7 @@
             btnText.style.display = "none";
             spinner.style.display = "inline-block";
 
-            // Prepare Data (must match server.js expectations)
+            // Prepare form data
             const formData = {
               name: document.getElementById("name").value,
               email: document.getElementById("email").value,
@@ -593,7 +602,7 @@
             };
 
             try {
-              // Send data to Node.js Backend
+              // Send data to backend
               const response = await fetch(BACKEND_URL, {
                 method: "POST",
                 headers: {
@@ -604,8 +613,15 @@
 
               const result = await response.json();
 
+              // Handle rate limiting (429 status)
+              if (response.status === 429) {
+                throw new Error(
+                  "Too many requests. Please wait 15 minutes before submitting again.",
+                );
+              }
+
               if (response.ok && result.success) {
-                // Success Case
+                // Success
                 successAlert.style.display = "block";
                 contactForm.reset();
                 successAlert.scrollIntoView({
@@ -613,32 +629,38 @@
                   block: "center",
                 });
 
-                // Auto-hide success message after 10 seconds
+                // Auto-hide after 10 seconds
                 setTimeout(() => {
                   successAlert.style.display = "none";
                 }, 10000);
               } else {
-                // Server returned an error (e.g., missing fields)
+                // Server error
                 throw new Error(result.message || "Server error occurred");
               }
             } catch (error) {
-              // Network or Logic Error
+              // Error handling with better UX
               console.error("Submission Error:", error);
-              // Better rate limit detection
+
+              // Improved error messages
               if (error.message.includes("Too many requests")) {
                 errorText.innerText =
-                  "Please wait 15 minutes before submitting again.";
+                  "Too many attempts. Please wait 15 minutes before trying again.";
+              } else if (error.message.includes("Failed to fetch")) {
+                errorText.innerText =
+                  "Connection failed. Please check your internet and try again.";
               } else {
                 errorText.innerText =
-                  error.message || "Connection failed. Please try again.";
+                  error.message ||
+                  "Failed to send message. Please try again or contact us directly.";
               }
+
               errorAlert.style.display = "block";
               errorAlert.scrollIntoView({
                 behavior: "smooth",
                 block: "center",
               });
             } finally {
-              // Restore Button State
+              // Always restore button state
               submitBtn.disabled = false;
               submitBtn.classList.remove("btn-disabled");
               btnText.style.display = "inline";
